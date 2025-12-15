@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Challenges</title>
+
+    <link rel="stylesheet" href="design.css" />
+</head>
+
+<body>
+    <div class="terminal">
+        <h1>Challenges</h1>
+        <p>Complete all and get a reward. Good luck! ;]</p>
+        <div class="grid">
+            <div class="challenge" id="ch01">
+                <strong>Lost in the source</strong>
+                <input
+                    type="text"
+                    class="answer"
+                    placeholder="Enter answer"
+                />
+                <span class="result"></span>
+                </div>
+            <div class="challenge" id="ch02">
+                <strong>Robots and texts</strong>
+                <input
+                    type="text"
+                    class="answer"
+                    placeholder="Enter answer"
+                />
+                <span class="result"></span>
+                </div>
+            <div class="challenge" id="ch03">
+                
+                <a href="/ctf/challenges/files/stars_and_bars.zip" download><strong>Stars and bars</strong></a>
+
+                <input
+                    type="text"
+                    class="answer"
+                    placeholder="Enter answer"
+                />
+                <span class="result"></span>
+                </div>
+            <div class="challenge" id="ch04">
+                <a href="/ctf/challenges/files/Calendar.zip" download><strong>Calendar that shows dates. No less, no more...</strong></a>
+                <input
+                    type="text"
+                    class="answer"
+                    placeholder="Enter answer"
+                />
+                <span class="result"></span>
+                </div>
+
+            <div class="challenge" id="ch05">
+                <strong>Callender that shows dates. No less, no more...</strong>
+                <input
+                    type="text"
+                    class="answer"
+                    placeholder="Enter answer"
+                />
+                <span class="result"></span>
+                </div>
+
+            <div class="challenge"><strong>CH06</strong><span class="muted">Coming soon</span></div>
+            <div class="challenge"><strong>CH07</strong><span class="muted">Coming soon</span></div>
+            <div class="challenge"><strong>CH08</strong><span class="muted">Coming soon</span></div>
+            <div class="challenge"><strong>CH09</strong><span class="muted">Coming soon</span></div>
+            <div class="challenge"><strong>CH10</strong><span class="muted">Coming soon</span></div>
+        </div>
+
+        <p><a class="btn" href="/ctf/">Back</a></p>
+    </div>
+</body>
+<script>
+const correctAnswer = "CTF{H3110_TH3r3}";
+const correctAnswer2 = "CTF{4NOTH3R_FL4G}";
+const correctAnswer3 = "WHAT HATH GOD WROUGHT?";
+const correctAnswer4 = "CTF{L3ST3R_M00RE}";
+document
+  .querySelector("#ch01 .answer")
+  .addEventListener("keydown", function (e) {
+
+    if (e.key === "Enter") {
+      const result = document.querySelector("#ch01 .result");
+
+      if (this.value.trim() === correctAnswer) {
+        this.disabled = true;
+        result.textContent = "Correct answer!!";
+        result.style.color = "#00ff66";
+      } else {
+        result.textContent = "Wrong answer";
+        result.style.color = "#ff4444";
+      }
+    }
+  });
+  
+document
+  .querySelector("#ch02 .answer")
+  .addEventListener("keydown", function (e) {
+
+    if (e.key === "Enter") {
+      const result = document.querySelector("#ch02 .result");
+
+      if (this.value.trim() === correctAnswer2) {
+        this.disabled = true;
+        result.textContent = "Correct answer!!";
+        result.style.color = "#00ff66";
+      } else {
+        result.textContent = "Wrong answer";
+        result.style.color = "#ff4444";
+      }
+    }
+  });
+
+document
+  .querySelector("#ch03 .answer")
+  .addEventListener("keydown", function (e) {
+
+    if (e.key === "Enter") {
+      const result = document.querySelector("#ch03 .result");
+
+      if (this.value.trim() === correctAnswer3) {
+        this.disabled = true;
+        result.textContent = "Correct answer!!";
+        result.style.color = "#00ff66";
+      } else {
+        result.textContent = "Wrong answer";
+        result.style.color = "#ff4444";
+      }
+    }
+  });
+
+document
+  .querySelector("#ch04 .answer")
+  .addEventListener("keydown", function (e) {
+
+    if (e.key === "Enter") {
+      const result = document.querySelector("#ch04 .result");
+
+      if (this.value.trim() === correctAnswer4) {
+        this.disabled = true;
+        result.textContent = "Correct answer!!";
+        result.style.color = "#00ff66";
+      } else {
+        result.textContent = "Wrong answer";
+        result.style.color = "#ff4444";
+      }
+    }
+  });
+
+
+</script>
+
+</html>
