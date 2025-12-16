@@ -113,41 +113,48 @@
 </p>
 
   </div>
+<div id="winModal" class="modal" aria-hidden="true">
+  <div class="modal-box">
+    <h2>Congratulations!! You made it!</h2>
+    <p>Your reward is your new gained skills :]</p>
 
-  <div id="winModal" class="modal" aria-hidden="true">
-    <div class="modal-box">
-      <h2>Congratulations!! You made it!</h2>
-      <div id="fireworksHolder"></div>
+    <div id="fireworksHolder"></div>
 
-<form id="registerForm" class="register" style="display:none; margin-top:16px;">
-  <input
-    type="email"
-    name="email"
-    placeholder="Enter your email"
-    required
-    style="width:100%; padding:8px; margin-bottom:10px;"
-  />
-  <button class="btn" type="submit">Register</button>
-</form>
+    <form id="registerForm" style="margin-top:16px;">
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+        class="terminal-control"
+      />
+    </form>
 
-<button id="closeModal" class="btn" type="button">Close</button>
+    <div class="modal-actions">
+      <button class="terminal-control" type="submit" form="registerForm">Register</button>
+      <button id="closeModal" class="terminal-control" type="button">Close</button>
+    </div>
+  </div>
+</div>
+
+
       
     </div>
   </div>
 
   <script>
     const answers = {
-      ch01: "a",//"CTF{H3110_TH3r3}", 
-      ch02: "a",//"CTF{4NOTH3R_FL4G}",
-      ch03: "a",//"CTF{WHAT HATH GOD WROUGHT?}",
-      ch04: "a",//"CTF{L3ST3R_M00RE}",
-      ch05: "a",//"CTF{ST3G4NOGR4PHY_IN_TH3_W1LD}",
-      ch06: "a",//"CTF{N3V3R_B4CK_DOWN}",
-      ch07: "a",//"CTF{CH4NG3_UR_P4SSW0RD}",
+      ch01: "CTF{H3110_TH3r3}", 
+      ch02: "CTF{4NOTH3R_FL4G}",
+      ch03: "CTF{WHAT HATH GOD WROUGHT?}",
+      ch04: "CTF{L3ST3R_M00RE}",
+      ch05: "CTF{ST3G4NOGR4PHY_IN_TH3_W1LD}",
+      ch06: "CTF{N3V3R_B4CK_DOWN}",
+      ch07: "CTF{CH4NG3_UR_P4SSW0RD}",
       //wingslove 
-      ch08: "a",//"CTF{FR0M_BR1CKS_T0_BYT35}",
-      ch09: "a",//"CTF{TH1S_TH3_R3AL_0NE}",
-      ch010:"a",//"CTF{SUMM3R_S4DN3SS}",
+      ch08: "CTF{FR0M_BR1CKS_T0_BYT35}",
+      ch09: "CTF{TH1S_TH3_R3AL_0NE}",
+      ch010:"CTF{SUMM3R_S4DN3SS}",
     };
 
     let winShown = false;
