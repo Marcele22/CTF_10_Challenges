@@ -130,7 +130,20 @@
     <div class="modal-box">
       <h2>Congratulations!! You made it!</h2>
       <div id="fireworksHolder"></div>
-      <button id="closeModal" class="btn" type="button">Close</button>
+
+<form id="registerForm" class="register" style="display:none; margin-top:16px;">
+  <input
+    type="email"
+    name="email"
+    placeholder="Enter your email"
+    required
+    style="width:100%; padding:8px; margin-bottom:10px;"
+  />
+  <button class="btn" type="submit">Register</button>
+</form>
+
+<button id="closeModal" class="btn" type="button">Close</button>
+      
     </div>
   </div>
 
@@ -170,10 +183,11 @@
       img.src = "fireworks.gif?t=" + Date.now();
       holder.appendChild(img);
 
-      const modal = document.getElementById("winModal");
-      modal.classList.add("show");
-      modal.setAttribute("aria-hidden", "false");
-    }
+      document.getElementById("registerForm").style.display = "block";
+
+  const modal = document.getElementById("winModal");
+  modal.classList.add("show");
+  modal.setAttribute("aria-hidden", "false");    }
 
     function closeWinModal() {
       const modal = document.getElementById("winModal");
@@ -213,6 +227,7 @@
 
     document.getElementById("winModal").addEventListener("click", (e) => {
       if (e.target.id === "winModal") closeWinModal();
+      
     });
   </script>
 </body>
