@@ -1,323 +1,219 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Challenges</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Challenges</title>
+  <link rel="stylesheet" href="design.css" />
 
-    <link rel="stylesheet" href="design.css" />
+  <style>
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.75);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 20px;
+    }
+    .modal.show { display: flex; }
+    .modal-box {
+      background: #000;
+      border: 2px solid #fff;
+      padding: 16px;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+    }
+    .modal-box h2 {
+      margin: 0 0 12px 0;
+    }
+    .fireworks {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 10px auto 14px auto;
+      border: 2px solid #fff;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="terminal">
-        <h1>Challenges</h1>
-        <p>Complete all and get a reward. Good luck! ;]</p>
-        <div class="grid">
-            <div class="challenge" id="ch01">
-                <strong>Lost in the source</strong>
-                <input
-                    type="text"
-                    class="answer"
-                    placeholder="CTF{...}"
-                />
-                <span class="result"></span>
-                </div>
-            <div class="challenge" id="ch02">
-                <strong>Robots and texts</strong>
-                <input
-                    type="text"
-                    class="answer"
-                    placeholder="CTF{...}"
-                    
-                />
-                <span class="result"></span>
-                </div>
-            <div class="challenge" id="ch03">
-                
-                <a href="/CTF_10_Challenges/docs/challenges/files/stars_and_bars.zip" download><strong>Stars and bars</strong></a>
+  <div class="terminal">
+    <h1>Challenges</h1>
+    <p>Complete all and get a reward. Good luck! ;]</p>
 
-                <input
-                    type="text"
-                    class="answer"
-                    placeholder="CTF{...}"
-                    
-                />
-                <span class="result"></span>
-                </div>
-            <div class="challenge" id="ch04">
-                <a href="/CTF_10_Challenges/docs/challenges/files/Calendar.zip" download><strong>Calendar that shows dates. No less, no more...</strong></a>
-                <input
-                    type="text"
-                    class="answer"
-                    placeholder="CTF{...}"
-                    
-                />
-                <span class="result"></span>
-                </div>
+    <div class="grid">
+      <div class="challenge" id="ch01">
+        <strong>Lost in the source</strong>
+        <input type="text" class="answer" placeholder="CTF{...}" />
+        <span class="result"></span>
+      </div>
 
-            <div class="challenge" id="ch05">
-                <a href="/CTF_10_Challenges/docs/challenges/files/forest.zip" download><strong>Sun, Trees, Eagles, Grass...hide!</strong></a>
-                <input
-                    type="text"
-                    class="answer"
-                    placeholder="CTF{...}"
-                    
-                />
-                <span class="result"></span>
-                </div>
+      <div class="challenge" id="ch02">
+        <strong>Robots and texts</strong>
+        <input type="text" class="answer" placeholder="CTF{...}" />
+        <span class="result"></span>
+      </div>
 
-            <div class="challenge" id="ch06">
-                <a href="/CTF_10_Challenges/docs/challenges/files/forest.zip" download><strong>Help! Our BASE is under attack by 58 enemies! Encode this message xor we will die!</strong></a>
-                <p class="muted">wQToHFuhzcsST5ZEE2WX8K9sZWU</p>
-                <input
-                    type="text"
-                    class="answer"
-                    placeholder="CTF{...}"
-                    
-                />
-                <span class="result"></span>
-                </div>
+      <div class="challenge" id="ch03">
+        <a href="/CTF_10_Challenges/docs/challenges/files/stars_and_bars.zip" download>
+          <strong>Stars and bars</strong>
+        </a>
+        <input type="text" class="answer" placeholder="CTF{...}" />
+        <span class="result"></span>
+      </div>
 
-            <div class="challenge" id="ch07">
-                <a href="/CTF_10_Challenges/docs/challenges/files/Rockyou.zip" download><strong>Missing password</strong></a>
-                <input
-                    type="text"
-                    class="answer"
-                    placeholder="CTF{...}"
-                    
-                />
-                <span class="result"></span>
-                </div>
-            <div class="challenge" id="ch08">
-                <a href="/CTF_10_Challenges/docs/challenges/files/Firewall.zip" download><strong>Firewall</strong></a>
-                <input
-                    type="text"
-                    class="answer"
-                    placeholder="CTF{...}"
-                    
-                />
-                <span class="result"></span>
-                </div>
+      <div class="challenge" id="ch04">
+        <a href="/CTF_10_Challenges/docs/challenges/files/Calendar.zip" download>
+          <strong>Calendar that shows dates. No less, no more...</strong>
+        </a>
+        <input type="text" class="answer" placeholder="CTF{...}" />
+        <span class="result"></span>
+      </div>
 
-            <div class="challenge" id="ch09">
-                <a href="/CTF_10_Challenges/docs/challenges/files/Is_it_really_text.zip" download><strong>Magic</strong></a>
-                <input
-                    type="text"
-                    class="answer"
-                    placeholder="CTF{...}"
-                    
-                />
-                <span class="result"></span>
-                </div>
+      <div class="challenge" id="ch05">
+        <a href="/CTF_10_Challenges/docs/challenges/files/forest.zip" download>
+          <strong>Sun, Trees, Eagles, Grass...hide!</strong>
+        </a>
+        <input type="text" class="answer" placeholder="CTF{...}" />
+        <span class="result"></span>
+      </div>
 
-            <div class="challenge" id="ch010">
-                <a href="/CTF_10_Challenges/docs/challenges/Note.zip" download><strong>Path</strong></a>
-                <input
-                    type="text"
-                    class="answer"
-                    placeholder="CTF{...}"
-                    
-                />
-                <span class="result"></span>
-                </div>
+      <div class="challenge" id="ch06">
+        <a href="/CTF_10_Challenges/docs/challenges/files/forest.zip" download>
+          <strong>Help! Our BASE is under attack by 58 enemies! Encode this message xor we will die!</strong>
+        </a>
+        <p class="muted">wQToHFuhzcsST5ZEE2WX8K9sZWU</p>
+        <input type="text" class="answer" placeholder="CTF{...}" />
+        <span class="result"></span>
+      </div>
 
+      <div class="challenge" id="ch07">
+        <a href="/CTF_10_Challenges/docs/challenges/files/Rockyou.zip" download>
+          <strong>Missing password</strong>
+        </a>
+        <input type="text" class="answer" placeholder="CTF{...}" />
+        <span class="result"></span>
+      </div>
 
-        </div>
+      <div class="challenge" id="ch08">
+        <a href="/CTF_10_Challenges/docs/challenges/files/Firewall.zip" download>
+          <strong>Ones and Zeros</strong>
+        </a>
+        <input type="text" class="answer" placeholder="CTF{...}" />
+        <span class="result"></span>
+      </div>
 
-        <p><a class="btn" href="/CTF_10_Challenges/docs/">Back</a></p>
+      <div class="challenge" id="ch09">
+        <a href="/CTF_10_Challenges/docs/challenges/files/Is_it_really_text.zip" download>
+          <strong>Magic</strong>
+        </a>
+        <input type="text" class="answer" placeholder="CTF{...}" />
+        <span class="result"></span>
+      </div>
+
+      <div class="challenge" id="ch010">
+        <a href="/CTF_10_Challenges/docs/challenges/Note.zip" download>
+          <strong>Left message</strong>
+        </a>
+        <input type="text" class="answer" placeholder="CTF{...}" />
+        <span class="result"></span>
+      </div>
     </div>
+
+    <p><a class="btn" href="/CTF_10_Challenges/docs/">Back</a></p>
+  </div>
+
+  <div id="winModal" class="modal" aria-hidden="true">
+    <div class="modal-box">
+      <h2>Congratulations!! You made it!</h2>
+      <div id="fireworksHolder"></div>
+      <button id="closeModal" class="btn" type="button">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const answers = {
+      ch01: "CTF{H3110_TH3r3}",
+      ch02: "CTF{4NOTH3R_FL4G}",
+      ch03: "CTF{WHAT HATH GOD WROUGHT?}",
+      ch04: "CTF{L3ST3R_M00RE}",
+      ch05: "CTF{ST3G4NOGR4PHY_IN_TH3_W1LD}",
+      ch06: "CTF{N3V3R_B4CK_DOWN}",
+      ch07: "CTF{CH4NG3_UR_P4SSW0RD}",
+      //wingslove 
+      ch08: "CTF{FR0M_BR1CKS_T0_BYT35}",
+      ch09: "CTF{TH1S_TH3_R3AL_0NE}",
+      ch010:"CTF{SUMM3R_S4DN3SS}",
+    };
+
+    let winShown = false;
+
+    function allSolved() {
+      return Object.keys(answers).every(id => {
+        const input = document.querySelector(`#${id} .answer`);
+        return input && input.disabled === true;
+      });
+    }
+
+    function showWinModal() {
+      if (winShown) return;
+      winShown = true;
+
+      const holder = document.getElementById("fireworksHolder");
+      holder.innerHTML = "";
+      const img = document.createElement("img");
+      img.className = "fireworks";
+      img.alt = "Fireworks";
+      img.src = "fireworks.gif?t=" + Date.now();
+      holder.appendChild(img);
+
+      const modal = document.getElementById("winModal");
+      modal.classList.add("show");
+      modal.setAttribute("aria-hidden", "false");
+    }
+
+    function closeWinModal() {
+      const modal = document.getElementById("winModal");
+      modal.classList.remove("show");
+      modal.setAttribute("aria-hidden", "true");
+    }
+
+    document.querySelectorAll(".challenge").forEach(ch => {
+      const input = ch.querySelector(".answer");
+      const result = ch.querySelector(".result");
+      if (!input || !ch.id) return;
+
+      input.addEventListener("keydown", function(e) {
+        if (e.key !== "Enter") return;
+
+        const expected = answers[ch.id];
+        if (!expected) return;
+
+        if (this.value.trim() === expected) {
+          this.disabled = true;
+          result.textContent = "Correct answer!!";
+          result.style.color = "#00ff66";
+
+          if (allSolved()) showWinModal();
+        } else {
+          result.textContent = "Wrong answer";
+          result.style.color = "#ff4444";
+        }
+      });
+    });
+
+    document.getElementById("closeModal").addEventListener("click", closeWinModal);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeWinModal();
+    });
+
+    document.getElementById("winModal").addEventListener("click", (e) => {
+      if (e.target.id === "winModal") closeWinModal();
+    });
+  </script>
 </body>
-<script>
-const correctAnswer = "CTF{H3110_TH3r3}";
-const correctAnswer2 = "CTF{4NOTH3R_FL4G}";
-const correctAnswer3 = "CTF{WHAT HATH GOD WROUGHT?}";
-const correctAnswer4 = "CTF{L3ST3R_M00RE}";
-const correctAnswer5 = "CTF{ST3G4NOGR4PHY_IN_TH3_W1LD}";
-//forest
-const correctAnswer6 = "CTF{N3V3R_B4CK_DOWN}";
-const correctAnswer7 = "CTF{CH4NG3_UR_P4SSW0RD}";
-//Mustang0108(nebe)
-//wingslove
-const correctAnswer8 = "CTF{FR0M_BR1CKS_T0_BYT35}";
-const correctAnswer9 = "CTF{TH1S_TH3_R3AL_0NE}";
-const correctAnswer10 = "CTF{SUMM3R_S4DN3SS}";
-
-document  
-  .querySelector("#ch01 .answer")
-  .addEventListener("keydown", function (e) {
-
-    if (e.key === "Enter") {
-      const result = document.querySelector("#ch01 .result");
-
-      if (this.value.trim() === correctAnswer) {
-        this.disabled = true;
-        result.textContent = "Correct answer!!";
-        result.style.color = "#00ff66";
-      } else {
-        result.textContent = "Wrong answer";
-        result.style.color = "#ff4444";
-      }
-    }
-  });
-  
-document
-  .querySelector("#ch02 .answer")
-  .addEventListener("keydown", function (e) {
-
-    if (e.key === "Enter") {
-      const result = document.querySelector("#ch02 .result");
-
-      if (this.value.trim() === correctAnswer2) {
-        this.disabled = true;
-        result.textContent = "Correct answer!!";
-        result.style.color = "#00ff66";
-      } else {
-        result.textContent = "Wrong answer";
-        result.style.color = "#ff4444";
-      }
-    }
-  });
-
-document
-  .querySelector("#ch03 .answer")
-  .addEventListener("keydown", function (e) {
-
-    if (e.key === "Enter") {
-      const result = document.querySelector("#ch03 .result");
-
-      if (this.value.trim() === correctAnswer3) {
-        this.disabled = true;
-        result.textContent = "Correct answer!!";
-        result.style.color = "#00ff66";
-      } else {
-        result.textContent = "Wrong answer";
-        result.style.color = "#ff4444";
-      }
-    }
-  });
-
-document
-  .querySelector("#ch04 .answer")
-  .addEventListener("keydown", function (e) {
-
-    if (e.key === "Enter") {
-      const result = document.querySelector("#ch04 .result");
-
-      if (this.value.trim() === correctAnswer4) {
-        this.disabled = true;
-        result.textContent = "Correct answer!!";
-        result.style.color = "#00ff66";
-      } else {
-        result.textContent = "Wrong answer";
-        result.style.color = "#ff4444";
-      }
-    }
-  });
-
-document
-  .querySelector("#ch05 .answer")
-  .addEventListener("keydown", function (e) {
-
-    if (e.key === "Enter") {
-      const result = document.querySelector("#ch05 .result");
-
-      if (this.value.trim() === correctAnswer5) {
-        this.disabled = true;
-        result.textContent = "Correct answer!!";
-        result.style.color = "#00ff66";
-      } else {
-        result.textContent = "Wrong answer";
-        result.style.color = "#ff4444";
-      }
-    }
-  });
-document
-  .querySelector("#ch06 .answer")
-  .addEventListener("keydown", function (e) {
-
-    if (e.key === "Enter") {
-      const result = document.querySelector("#ch06 .result");
-
-      if (this.value.trim() === correctAnswer6) {
-        this.disabled = true;
-        result.textContent = "Correct answer!!";
-        result.style.color = "#00ff66";
-      } else {
-        result.textContent = "Wrong answer";
-        result.style.color = "#ff4444";
-      }
-    }
-  });
-document
-  .querySelector("#ch07 .answer")
-  .addEventListener("keydown", function (e) {
-
-    if (e.key === "Enter") {
-      const result = document.querySelector("#ch07 .result");
-
-      if (this.value.trim() === correctAnswer7) {
-        this.disabled = true;
-        result.textContent = "Correct answer!!";
-        result.style.color = "#00ff66";
-      } else {
-        result.textContent = "Wrong answer";
-        result.style.color = "#ff4444";
-      }
-    }
-  });
-
-document
-  .querySelector("#ch08 .answer")
-  .addEventListener("keydown", function (e) {
-
-    if (e.key === "Enter") {
-      const result = document.querySelector("#ch08 .result");
-
-      if (this.value.trim() === correctAnswer8) {
-        this.disabled = true;
-        result.textContent = "Correct answer!!";
-        result.style.color = "#00ff66";
-      } else {
-        result.textContent = "Wrong answer";
-        result.style.color = "#ff4444";
-      }
-    }
-  });
-document
-  .querySelector("#ch09 .answer")
-  .addEventListener("keydown", function (e) {
-
-    if (e.key === "Enter") {
-      const result = document.querySelector("#ch09 .result");
-
-      if (this.value.trim() === correctAnswer9) {
-        this.disabled = true;
-        result.textContent = "Correct answer!!";
-        result.style.color = "#00ff66";
-      } else {
-        result.textContent = "Wrong answer";
-        result.style.color = "#ff4444";
-      }
-    }
-  });
-document
-  .querySelector("#ch010 .answer")
-  .addEventListener("keydown", function (e) {
-
-    if (e.key === "Enter") {
-      const result = document.querySelector("#ch010 .result");
-
-      if (this.value.trim() === correctAnswer10) {
-        this.disabled = true;
-        result.textContent = "Correct answer!!";
-        result.style.color = "#00ff66";
-      } else {
-        result.textContent = "Wrong answer";
-        result.style.color = "#ff4444";
-      }
-    }
-  });
-
-</script>
-
 </html>
